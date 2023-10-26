@@ -1,0 +1,30 @@
+.loginPage {
+  padding-block: 50px 118px;
+  padding-inline: 40px;
+}
+
+@media screen and (min-width: 500px) {
+  .loginPage {
+    padding-inline: 70px;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    max-width: 440px;
+    margin-inline: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 660px;
+  }
+}

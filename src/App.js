@@ -1,13 +1,9 @@
 import React from 'react';
-import Test from './components/Test/index.jsx';
 
-const App = () => {
-  return (
-    <>
-      <div>App</div>
-      <Test />
-    </>
-  );
-};
+import Login from './pages/login.jsx';
+
+function App() {
+  return <Login />;
+}
 
 export default App;

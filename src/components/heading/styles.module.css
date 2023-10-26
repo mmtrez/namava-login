@@ -1,0 +1,31 @@
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 34px;
+}
+
+.logo {
+  width: 64px;
+  height: 32px;
+}
+
+.registerBtn {
+  padding: 13px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: #414141;
+  border-radius: 6px;
+  color: #fff;
+}
+
+@media screen and (min-width: 1280px) {
+  .heading {
+    margin-bottom: 44px;
+  }
+
+  .registerBtn {
+    padding: 11.5px 25px;
+    font-size: 14px;
+  }
+}
