@@ -12,10 +12,14 @@ function Content() {
       <LoginForm />
       <div className={classes.links}>
         <span>
-          <a href="#">رمز عبور خود را فراموش کرده ام</a>
+          <a href="https://www.namava.ir/auth/recover-email">
+            رمز عبور خود را فراموش کرده ام
+          </a>
         </span>
         <span>
-          <a href="#">ورود از طریق شماره تلفن همراه</a>
+          <a href="https://www.namava.ir/auth/login-phone">
+            ورود از طریق شماره تلفن همراه
+          </a>
         </span>
       </div>
     </div>

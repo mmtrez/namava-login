@@ -2,7 +2,7 @@
   position: absolute;
   top: 60px;
   inset-inline: 0;
-  animation: slide-in 700ms;
+  animation: slide-in 3000ms;
 }
 
 .toast {
@@ -14,7 +14,7 @@
   border-radius: 4px;
   width: max-content;
   margin-inline: auto;
-  animation: slide-in 400ms;
+  animation: slide-in 3000ms;
 }
 
 .icon {
@@ -27,10 +27,16 @@
 }
 
 @keyframes slide-in {
-  from {
+  0% {
     transform: translateY(-150%);
   }
-  to {
-    transform: translateX(0);
+  15% {
+    transform: translateY(0%);
+  }
+  85% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-150%);
   }
 }
