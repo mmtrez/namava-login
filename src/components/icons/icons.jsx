@@ -69,3 +69,42 @@ export function HideIcon(props) {
     </svg>
   );
 }
+
+export function WarningIcon(props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="25"
+      height="24"
+      fill="none"
+      viewBox="0 0 25 24"
+      {...props}
+    >
+      <path
+        fill="#fff"
+        fillRule="evenodd"
+        d="M22.32 18.668L13.662 3.67a1.342 1.342 0 00-2.324 0L2.68 18.668a1.342 1.342 0 001.162 2.012h17.315a1.341 1.341 0 001.163-2.012zm-9.82.542a1.255 1.255 0 110-2.509 1.255 1.255 0 010 2.508zm1.54-10.582l-.976 6.793a.591.591 0 01-1.128 0l-.976-6.794a.512.512 0 01.564-.525h1.952a.512.512 0 01.564.525v.001z"
+        clipRule="evenodd"
+      ></path>
+      <mask
+        id="mask0_1628_572"
+        style={{maskType: 'luminance'}}
+        width="21"
+        height="18"
+        x="2"
+        y="3"
+        maskUnits="userSpaceOnUse"
+      >
+        <path
+          fill="#fff"
+          fillRule="evenodd"
+          d="M22.32 18.668L13.662 3.67a1.342 1.342 0 00-2.324 0L2.68 18.668a1.342 1.342 0 001.162 2.012h17.315a1.341 1.341 0 001.163-2.012zm-9.82.542a1.255 1.255 0 110-2.509 1.255 1.255 0 010 2.508zm1.54-10.582l-.976 6.793a.591.591 0 01-1.128 0l-.976-6.794a.512.512 0 01.564-.525h1.952a.512.512 0 01.564.525v.001z"
+          clipRule="evenodd"
+        ></path>
+      </mask>
+      <g mask="url(#mask0_1628_572)">
+        <path fill="#fff" d="M0.5 0H24.5V24H0.5z"></path>
+      </g>
+    </svg>
+  );
+}

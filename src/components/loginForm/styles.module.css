@@ -13,3 +13,8 @@
   background-color: #aaaaaa;
   color: #fff;
 }
+
+.loading {
+  width: 26px;
+  height: 26px;
+}
