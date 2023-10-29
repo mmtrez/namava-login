@@ -9,7 +9,7 @@
   margin-top: 40px;
 }
 
-.submitBtn:disabled {
+.submitBtn:disabled:not(.onLoading) {
   background-color: #aaaaaa;
   color: #fff;
 }

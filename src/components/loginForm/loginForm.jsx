@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Player} from '@lottiefiles/react-lottie-player';
+import cx from 'classnames';
 
 import Input from '../input/input.jsx';
 import {ShowIcon, HideIcon} from '../icons/icons.jsx';
@@ -41,6 +42,10 @@ function LoginForm() {
     const response = await login(mail, password);
     setLoading(false);
 
+    if (!response) {
+      return addToast('خطای شبکه');
+    }
+
     if (!response.succeeded) {
       return addToast(errorMessages[response.error.code]);
     }
@@ -73,8 +78,8 @@ function LoginForm() {
       />
       <button
         type="submit"
-        className={classes.submitBtn}
-        disabled={!Boolean(loginData.mail && loginData.password)}
+        className={cx(classes.submitBtn, {[classes.onLoading]: loading})}
+        disabled={!Boolean(loginData.mail && loginData.password && !loading)}
       >
         {loading ? (
           <Player autoplay loop src={loadingJSON} className={classes.loading}></Player>

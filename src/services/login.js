@@ -10,9 +10,20 @@ const login = async (mail, password) => {
       'https://www.namava.ir/api/v1.0/accounts/login/by-email',
       reqBody,
     );
+
     return data;
   } catch (err) {
     console.log(err);
+
+    if (err?.response?.status === 429) {
+      return {
+        succeeded: false,
+        error: {
+          code: 429,
+          message: err.message,
+        },
+      };
+    }
   }
 };
 
