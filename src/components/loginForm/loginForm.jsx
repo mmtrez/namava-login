@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {Player} from '@lottiefiles/react-lottie-player';
 import cx from 'classnames';
+import Cookies from 'js-cookie';
+import {useNavigate} from 'react-router-dom';
 
 import Input from '../input/input.jsx';
 import {ShowIcon, HideIcon} from '../icons/icons.jsx';
@@ -16,6 +18,7 @@ function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [loginData, setLoginData] = useState({mail: '', password: ''});
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const {addToast} = useToast();
 
   const toggleShowPassword = () => setShowPassword(!showPassword);
@@ -50,8 +53,8 @@ function LoginForm() {
       return addToast(errorMessages[response.error.code]);
     }
 
-    // document.cookie = `auth_v2=${response.result}; domain=namava.ir; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT`;
-    document.cookie = `auth_v2 = ${response.result}`;
+    Cookies.set('token', response.result);
+    navigate('/comments');
   };
 
   return (
