@@ -1,6 +1,9 @@
 .loginPage {
   padding-block: 50px 118px;
   padding-inline: 40px;
+  background-image: radial-gradient(at bottom, rgba(1, 111, 216, 0.4), #121212 80%);
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 @media screen and (min-width: 500px) {

@@ -43,14 +43,15 @@ function LoginForm() {
     setLoading(false);
 
     if (!response) {
-      return addToast('خطای شبکه');
+      return addToast(errorMessages.noResponse);
     }
 
     if (!response.succeeded) {
       return addToast(errorMessages[response.error.code]);
     }
 
-    alert('SUCCESS.');
+    // document.cookie = `auth_v2=${response.result}; domain=namava.ir; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT`;
+    document.cookie = `auth_v2 = ${response.result}`;
   };
 
   return (

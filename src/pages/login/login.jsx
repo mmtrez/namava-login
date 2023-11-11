@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Heading from '../components/heading/heading.jsx';
-import Content from '../components/content/content.jsx';
+import Heading from '../../components/heading/heading.jsx';
+import Content from '../../components/content/content.jsx';
 
 import classes from './styles.module.css';
 

@@ -63,8 +63,6 @@
 body {
   font-family: 'iranyekan';
   background-color: #121212;
-  background-image: radial-gradient(at bottom, rgba(1, 111, 216, 0.4), #121212 80%);
-  background-repeat: no-repeat;
   color: #fff;
   min-height: 100vh;
 }
