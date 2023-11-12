@@ -11,10 +11,9 @@ import {getComments} from '../../services/comments.js';
 import classes from './styles.module.css';
 import loadingLottie from '../../../public/assets/loading.json';
 
-function CommentsPage() {
+function CommentsPage({isLogedin}) {
   const [comments, setComments] = useState([]);
   const [page, setPage] = useState(1);
-  const [isLogedin, setIsLogedin] = useState(false);
   const [loading, setLoading] = useState(false);
 
   // ** Fns
@@ -33,16 +32,6 @@ function CommentsPage() {
   const handleNextPage = () => {
     setPage((prev) => prev + 1);
   };
-
-  // ** Effects
-  useEffect(() => {
-    const token = Cookies.get('token');
-    if (token) {
-      setIsLogedin(true);
-    } else {
-      setIsLogedin(false);
-    }
-  }, []);
 
   useEffect(() => {
     fetchComments();
