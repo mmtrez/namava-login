@@ -15,6 +15,12 @@
   border-radius: 50%;
 }
 
+.date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .firstRow span {
   font-size: 12px;
 }

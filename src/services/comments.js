@@ -14,38 +14,4 @@ const getComments = async (page, count = 10, mediaId) => {
   }
 };
 
-const postComment = async (flag, mediaId, mediaType, rawBody) => {
-  try {
-    const reqBody = {
-      flag,
-      mediaType,
-      mediaId,
-      rawBody,
-    };
-    const {data} = await axios.post('https://www.namava.ir/api/v1.0/comments', reqBody, {
-      withCredentials: true,
-      headers: {
-        // 'Access-Control-Allow-Origin': '*',
-        // 'Content-Type': 'application/json',
-        // Authorization: `Bearer ${cookies}`,
-        // Cookie: `auth_v2=${cookies}`,
-      },
-    });
-    console.log(data);
-    return data;
-  } catch (err) {
-    console.log(err);
-
-    if (err?.response?.status === 429) {
-      return {
-        succeeded: false,
-        error: {
-          code: 429,
-          message: err.message,
-        },
-      };
-    }
-  }
-};
-
-export {getComments, postComment};
+export {getComments};

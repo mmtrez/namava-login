@@ -51,7 +51,7 @@ function CommentsPage() {
   return (
     <div className={classes.container}>
       <h1 className={classes.title}>نظرات کاربران</h1>
-      {isLogedin ? <CommentField /> : <CommentLogin />}
+      {isLogedin ? <CommentField setComments={setComments} /> : <CommentLogin />}
       {comments.length ? (
         <>
           <Comments comments={comments} setPage={setPage} />

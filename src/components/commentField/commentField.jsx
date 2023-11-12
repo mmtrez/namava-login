@@ -3,14 +3,13 @@ import cx from 'classnames';
 import {Player} from '@lottiefiles/react-lottie-player';
 
 import {SendCircleIcon} from '../icons/icons.jsx';
-import {postComment} from '../../services/comments.js';
 
 import classes from './styles.module.css';
 import loadingLottie from '../../../public/assets/turningLottie.json';
 import sentLottie from '../../../public/assets/sentLottie.json';
 import checkBoxLottie from '../../../public/assets/checkboxLottie.json';
 
-function CommentField() {
+function CommentField({setComments}) {
   const [commentBody, setCommentBody] = useState('');
   const [status, setStatus] = useState('idle');
   const [spoiled, setSpoiled] = useState(false);
@@ -39,13 +38,20 @@ function CommentField() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(+spoiled, 140274, 'Series', commentBody);
+    // Mock add new comment
+    const newComment = {
+      flag: spoiled ? 'Spoiled' : 'None',
+      body: commentBody,
+      profileAvatar: '/Content/Upload/Images/e9b409a9-88d8-4ee5-a81e-6cddc50782b0.png',
+      profileCaption: 'Mohammadreza',
+      createDateUTC: '20231112T48912984Z',
+      commentLikeDislike: {dislikeCount: 0, likeCount: 0},
+      id: Math.floor(Math.random() * 1000),
+    };
     setStatus('loading');
-    // const response = await postComment(+spoiled, 140274, 'Series', commentBody);
-    // setStatus('sent');
-
     setTimeout(() => {
       setStatus('sent');
+      setComments((prev) => [newComment, ...prev]);
     }, 4000);
   };
 

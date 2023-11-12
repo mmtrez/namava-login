@@ -22,22 +22,22 @@ function CommentRow({comment}) {
     commentLikeDislike: {dislikeCount, likeCount},
   } = commentData;
 
-  const handleLikeClicked = () => {
-    if (likeLottieRef.currentFrame !== 0) {
-      likeLottieRef.setDirection(-1);
-    } else {
-      likeLottieRef.setDirection(1);
-    }
-    likeLottieRef.play();
-  };
-
-  const handleDislikeClicked = () => {
-    if (dislikeLottieRef.currentFrame !== 0) {
+  const handleUserInteraction = (el, type) => {
+    if (type === 'like') {
       dislikeLottieRef.setDirection(-1);
+      dislikeLottieRef.play();
     } else {
-      dislikeLottieRef.setDirection(1);
+      likeLottieRef.setDirection(-1);
+      likeLottieRef.play();
     }
-    dislikeLottieRef.play();
+
+    if (el.currentFrame !== 0) {
+      el.setDirection(-1);
+    } else {
+      el.setDirection(1);
+    }
+
+    el.play();
   };
 
   const handleOpenSpoiled = () => {
@@ -48,7 +48,9 @@ function CommentRow({comment}) {
     <div className={classes.card}>
       <div className={classes.firstRow}>
         <img src={`https://static.namava.ir${profileAvatar}`} alt="username" />
-        <span>{profileCaption}</span>-<span>{formatDate(createDateUTC)}</span>
+        <div className={classes.date}>
+          <span>{profileCaption}</span>-<span>{formatDate(createDateUTC)}</span>
+        </div>
       </div>
       {flag === 'Spoiled' ? (
         <div className={classes.spoilerAlert} onClick={handleOpenSpoiled}>
@@ -63,7 +65,7 @@ function CommentRow({comment}) {
         {flag !== 'Spoiled' && (
           <>
             <div>
-              <span onClick={handleLikeClicked}>
+              <span onClick={() => handleUserInteraction(likeLottieRef, 'like')}>
                 <Player
                   className={classes.icon}
                   src={likeLottie}
@@ -74,7 +76,7 @@ function CommentRow({comment}) {
               <span className={classes.likeCount}>{likeCount}</span>
             </div>
             <div>
-              <span onClick={handleDislikeClicked}>
+              <span onClick={() => handleUserInteraction(dislikeLottieRef, 'dislike')}>
                 <Player
                   className={classes.icon}
                   src={dislikeLottie}
