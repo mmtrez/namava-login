@@ -14,11 +14,11 @@ const getComments = async (page, count = 10, mediaId) => {
   }
 };
 
-const postComment = async (mediaId, rawBody) => {
+const postComment = async (flag, mediaId, mediaType, rawBody) => {
   try {
     const reqBody = {
-      flag: 0,
-      mediaType: 'Series',
+      flag,
+      mediaType,
       mediaId,
       rawBody,
     };
