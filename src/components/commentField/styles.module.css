@@ -1,0 +1,114 @@
+.firstRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.userProfile {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-inline-end: 20px;
+}
+
+.textField {
+  flex: 1;
+  height: 40px;
+  padding-inline: 12px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-inline-end: 8px;
+}
+
+.textField::placeholder {
+  color: #666;
+}
+
+.formBtn {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+}
+
+.sendIcon {
+  color: #666;
+}
+
+.sendIcon.active {
+  color: #99c14d;
+}
+
+.secondRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkboxWrapper {
+  width: 20px;
+  height: 20px;
+}
+
+.secondRow p {
+  font-size: 10px;
+}
+
+@media screen and (min-width: 500px) {
+  .userProfile {
+    margin-inline-end: 8px;
+  }
+
+  .textField {
+    padding-inline: 14px;
+  }
+
+  .textField::placeholder {
+    color: #666;
+  }
+
+  .secondRow {
+    gap: 16px;
+  }
+
+  .secondRow p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .userProfile {
+    width: 40px;
+    height: 40px;
+    margin-inline-end: 16px;
+  }
+
+  .textField {
+    height: 52px;
+    margin-inline-end: 16px;
+  }
+
+  .formBtn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .userProfile {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .textField {
+    font-size: 14px;
+  }
+
+  .secondRow p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,183 @@
+.card {
+  padding-top: 24px;
+}
+
+.firstRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #aaa;
+}
+
+.firstRow img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.firstRow span {
+  font-size: 12px;
+}
+
+.body {
+  font-size: 12px;
+  margin-inline-start: 40px;
+  margin-bottom: 24px;
+}
+
+.secondRow {
+  display: flex;
+  gap: 24px;
+  margin-inline-start: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #37383e;
+}
+
+.secondRow > div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.likeCount {
+  font-size: 14px;
+  color: #aaa;
+  padding-inline: 9px;
+}
+
+.card:nth-last-child(1) .secondRow {
+  border-bottom: none;
+  margin-bottom: 34px;
+  padding-bottom: 0;
+}
+
+.spoilerAlert {
+  max-width: 459px;
+  min-height: 51px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-inline-start: 40px;
+  background-color: #37383e;
+  padding-inline: 16px;
+  padding-block: 12px;
+  border-radius: 5px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+.helpIcon {
+  width: 26px;
+  height: 26px;
+}
+
+.spoilerAlert p {
+  flex: 1;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.chevIcon {
+  width: 24px;
+  height: 24px;
+  margin-inline-start: auto;
+}
+
+@media screen and (min-width: 500px) {
+  .card {
+    padding-top: 26px;
+  }
+
+  .secondRow {
+    margin-inline-start: 40px;
+    padding-bottom: 39px;
+  }
+
+  .card:nth-last-child(1) .secondRow {
+    margin-bottom: 62px;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .card {
+    padding-top: 31px;
+  }
+
+  .firstRow {
+    gap: 17px;
+  }
+
+  .firstRow img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .body {
+    margin-inline-start: 56px;
+  }
+
+  .secondRow {
+    margin-inline-start: 56px;
+    padding-bottom: 33px;
+  }
+
+  .card:nth-last-child(1) .secondRow {
+    margin-bottom: 64px;
+    padding-bottom: 0;
+  }
+
+  .spoilerAlert {
+    margin-inline-start: 56px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .card {
+    padding-top: 32px;
+  }
+
+  .firstRow {
+    gap: 16px;
+  }
+
+  .firstRow img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .body {
+    margin-inline-start: 54px;
+  }
+
+  .secondRow {
+    margin-inline-start: 54px;
+    padding-bottom: 32px;
+  }
+
+  .card:nth-last-child(1) .secondRow {
+    margin-bottom: 79px;
+    padding-bottom: 0;
+  }
+
+  .spoilerAlert {
+    margin-inline-start: 54px;
+    margin-top: 8px;
+  }
+
+  .spoilerAlert p {
+    font-size: 14px;
+  }
+}

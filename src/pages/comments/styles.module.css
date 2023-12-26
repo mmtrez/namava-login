@@ -1,0 +1,86 @@
+.container {
+  background-color: #222327;
+  padding: 24px 20px;
+  width: 100%;
+  margin-inline: auto;
+  max-width: 994px;
+  margin-block: 40px 80px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.moreBtn {
+  width: 97px;
+  height: 42px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-inline: auto;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingSpinner {
+  width: 36px;
+  height: 36px;
+}
+
+@media screen and (min-width: 500px) {
+  .container {
+    padding-inline: 19px;
+    margin-block: 60px 72px;
+  }
+
+  .title {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    padding: 32px 30px;
+    margin-block: 80px 100px;
+  }
+
+  .title {
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    padding-inline: 20px;
+    margin-top: 100px;
+    border-radius: 5px;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 48px;
+  }
+
+  .moreBtn {
+    width: 108px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    padding-inline: 24px;
+    margin-top: 94px;
+    max-width: 1000px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}

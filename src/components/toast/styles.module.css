@@ -1,0 +1,42 @@
+.toastWrapper {
+  position: absolute;
+  top: 60px;
+  inset-inline: 0;
+  animation: slide-in 3000ms;
+}
+
+.toast {
+  padding: 10px 16px;
+  background-color: #d95c5c;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 4px;
+  width: max-content;
+  margin-inline: auto;
+  animation: slide-in 3000ms;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.message {
+  font-size: 14px;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-150%);
+  }
+  15% {
+    transform: translateY(0%);
+  }
+  85% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-150%);
+  }
+}
